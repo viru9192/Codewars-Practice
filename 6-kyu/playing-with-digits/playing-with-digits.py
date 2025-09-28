@@ -1,11 +1,9 @@
 def dig_pow(n, p):
-    initial = n
     total = 0
+    org = n
     while n:
-        rem = n % 10
+        d = n % 10
         curr_p = p + len(str(n)) - 1
-        total += rem ** curr_p
+        total += d ** curr_p
         n //= 10
-    
-    return total // initial if total % initial == 0 else -1
-        
+    return total // org if total % org == 0 else -1
